@@ -9,7 +9,8 @@ const Button: FC<IProps> = ({
   children,
   iconLeft,
   iconRight,
-  loading = false
+  loading = false,
+  ...rest
 }) => {
   return (
     <ButtonTag
@@ -19,6 +20,7 @@ const Button: FC<IProps> = ({
       loading={loading}
       data-has-left-icon={!!iconLeft}
       data-has-right-icon={!!iconRight}
+      {...rest}
     >
       <span className="loading-icon">
         <Loading />
