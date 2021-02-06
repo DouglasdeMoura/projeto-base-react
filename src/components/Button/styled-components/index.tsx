@@ -1,10 +1,17 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { lighten, darken } from 'polished';
 
 interface IButtonTag {
   background: string;
   color: string;
+  loading: boolean;
 }
+
+const spin = keyframes`
+  to {
+    transform: rotate(360deg);
+  }
+`;
 
 export const ButtonTag = styled.button<IButtonTag>`
   font-weight: bold;
@@ -15,6 +22,37 @@ export const ButtonTag = styled.button<IButtonTag>`
   cursor: pointer;
   border-radius: 24px;
   outline: 0;
+  position: relative;
+  transition: all 0.2s;
+
+  &[data-has-left-icon="true"] {
+    padding-left: 16px;
+  }
+
+  &[data-has-right-icon="true"] {
+    padding-right: 16px;
+  }
+
+  .button-content {
+    visibility: ${props => props.loading ? 'hidden' : ''};
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  .loading-icon {
+    position: absolute;
+    display: ${props => props.loading ? 'block' : 'none'};
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    animation: ${spin} 1s linear infinite;
+  }
 
   &:hover {
     background: ${props => darken(0.05, props.background)};
@@ -28,5 +66,17 @@ export const ButtonTag = styled.button<IButtonTag>`
 
   &:focus {
     box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.25);
+  }
+
+  &:disabled,
+  &[disabled] {
+    opacity: 0.8;
+    cursor: wait;
+  }
+
+  &:disabled:hover,
+  &[disabled]:hover {
+    background: ${props => props.background};
+    border-color: ${props => props.background};
   }
 `;

@@ -27,3 +27,28 @@ Secondary.args = {
   background: '#ede9fe',
   color: '#895df4',
 };
+
+export const Loading = Template.bind({});
+Loading.args = {
+  children: 'Button',
+  loading: true,
+};
+
+export const IconLeft = Template.bind({});
+IconLeft.args = {
+  children: 'Button',
+  iconLeft: '✨',
+};
+
+export const IconRight = Template.bind({});
+IconRight.args = {
+  children: 'Button',
+  iconRight: '🔥'
+};
+
+export const BothIcons = Template.bind({});
+BothIcons.args = {
+  children: 'Button',
+  iconLeft: '✨',
+  iconRight: '🔥',
+};
