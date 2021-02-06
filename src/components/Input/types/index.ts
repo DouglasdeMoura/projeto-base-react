@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { InputHTMLAttributes, ReactNode } from 'react';
 
-export interface IProps {
+export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
   disabled?: boolean;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;

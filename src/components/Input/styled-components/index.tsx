@@ -1,6 +1,7 @@
+import { InputHTMLAttributes } from 'react';
 import styled from 'styled-components';
 
-interface IInputTag {
+interface IInputTag extends InputHTMLAttributes<HTMLInputElement> {
   disabled: boolean;
 }
 

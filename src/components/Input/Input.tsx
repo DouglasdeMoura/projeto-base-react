@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { InputContainer, InputTag } from './styled-components';
 import { IProps } from './types';
 
-const Input: FC<IProps> = ({ disabled = false, iconLeft, iconRight, label }) => {
+const Input: FC<IProps> = ({ disabled = false, iconLeft, iconRight, label, ...rest }) => {
   return (
     <InputContainer>
       <label htmlFor={label}>{label}</label>
@@ -13,6 +13,7 @@ const Input: FC<IProps> = ({ disabled = false, iconLeft, iconRight, label }) => 
         <InputTag
           id={label}
           disabled={disabled}
+          {...rest}
         />
         {iconRight && <i className="icon-right">{iconRight}</i>}
       </div>

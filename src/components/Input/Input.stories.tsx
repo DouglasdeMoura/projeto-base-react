@@ -6,12 +6,6 @@ import type { IProps } from './types';
 export default {
   title: 'Components/Input',
   component: Input,
-  /*
-  argTypes: {
-    background: { control: 'color' },
-    color: { control: 'color' },
-  },
-  */
 } as Meta;
 
 const Template: Story<IProps> = (args: IProps) => <Input {...args} />;
