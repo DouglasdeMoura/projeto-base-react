@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-export interface IProps {
+export interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   iconLeft?: ReactNode;
   iconRight?: ReactNode;
