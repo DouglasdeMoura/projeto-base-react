@@ -11,8 +11,3 @@ export default {
 const Template: Story<IProps> = (args: IProps) => <AddProduct {...args} />;
 
 export const Default = Template.bind({});
-
-export const Error = Template.bind({});
-Error.args = {
-  error: 'Preencha todos os campos do formulário'
-}
