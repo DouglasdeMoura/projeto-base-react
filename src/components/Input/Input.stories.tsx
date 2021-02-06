@@ -39,3 +39,9 @@ BothIcons.args = {
   iconLeft: '✨',
   iconRight: '🔥',
 };
+
+export const Error = Template.bind({});
+Error.args = {
+  label: 'Input label',
+  error: 'Error message',
+};
