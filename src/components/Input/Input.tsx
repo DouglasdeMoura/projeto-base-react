@@ -16,13 +16,13 @@ const Input: FC<IProps> = ({
       <div
         className="input-block"
       >
-        {iconLeft && <i className="icon-left">{iconLeft}</i>}
+        {iconLeft && <span className="icon-left">{iconLeft}</span>}
         <InputTag
           id={label}
           disabled={disabled}
           {...rest}
         />
-        {iconRight && <i className="icon-right">{iconRight}</i>}
+        {iconRight && <span className="icon-right">{iconRight}</span>}
       </div>
       {error && <Error>{error}</Error>}
     </InputContainer>
