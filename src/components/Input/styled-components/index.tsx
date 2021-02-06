@@ -36,3 +36,9 @@ export const InputContainer = styled.div`
     padding: 0 8px;
   }
 `;
+
+export const Error = styled.div`
+  color: #991B1B;
+  margin: 0.3em 0 0.3em 0;
+  font-size: 14px;
+`;
