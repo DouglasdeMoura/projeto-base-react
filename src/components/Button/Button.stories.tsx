@@ -1,0 +1,29 @@
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
+import Button from './Button';
+import type { IProps } from './types';
+
+export default {
+  title: 'Components/Button',
+  component: Button,
+  argTypes: {
+    background: { control: 'color' },
+    color: { control: 'color' },
+  },
+} as Meta;
+
+const Template: Story<IProps> = (args: IProps) => <Button {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  children: 'Primary',
+  background: '#895df4',
+  color: '#ede9fe',
+};
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  children: 'Secondary',
+  background: '#ede9fe',
+  color: '#895df4',
+};
