@@ -1,12 +1,13 @@
 import { FC } from 'react';
 import Produto from '../../components/Produto/Produto';
+import { ProdutosWrapper } from './styled-components';
 import { IProps } from './types';
 
 const Produtos: FC<IProps> = ({ produtos }) => {
   return (
-    <div>
+    <ProdutosWrapper>
       {produtos?.map(produto => <Produto {...produto} key={produto.id} />)}
-    </div>
+    </ProdutosWrapper>
   );
 }
 
