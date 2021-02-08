@@ -1,6 +1,6 @@
 import { FormEvent } from 'react';
-import Button from '../../components/Button/Button';
-import Input from '../../components/Input/Input';
+import Button from '../Button/Button';
+import Input from '../Input/Input';
 import useValue from './hooks/useValue';
 import { Form } from './styled-components';
 import notEmpty from './utils/notEmpty';
