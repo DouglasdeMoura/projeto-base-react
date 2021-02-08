@@ -47,7 +47,7 @@ const produtos = [
 ];
 
 export default {
-  title: 'Pages/Produtos',
+  title: 'Components/Produtos',
   component: Produtos,
 } as Meta;
 
