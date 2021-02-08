@@ -5,6 +5,7 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid #D1D5DB;
+  height: 62px;
 
   h1 {
     font-size: 24px;
